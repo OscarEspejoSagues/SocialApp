@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".SignUpActivity">
+
+        <!--Username-->
+        <TextView   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/fontsize"
+                    android:text="UserName"/>
+        <EditText
+                    android:id="@+id/usernameInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:layout_gravity="center"
+                    android:hint="Choose your App UserName"/>
+
+    <!--Email-->
+        <TextView   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/fontsize"
+                    android:text="E-mail"/>
+
+    <!--CAMBIA EL TECLADO A UNO ESPECIFICO-->
+    <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center"
+            android:hint="Add your Email"/>
+
+    <!--PASSWORD-->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:textSize="@dimen/fontsize"
+            android:textStyle="bold"
+            android:text="Password"/>
+
+    <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            android:hint="Add your Password"/>
+
+       <!--SignUp Button <> Go to Login-->
+    <Button
+            android:id="@+id/signupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:textSize="@dimen/fontsize"
+            android:text="Sign Up"/>
+
+    <!--Podria ser un boton pero es una text view -->
+    <TextView
+            android:id="@+id/gotologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:textSize="@dimen/fontsize"
+            android:text="@string/goto_login"/>
+
+    <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+
+
+</LinearLayout>
