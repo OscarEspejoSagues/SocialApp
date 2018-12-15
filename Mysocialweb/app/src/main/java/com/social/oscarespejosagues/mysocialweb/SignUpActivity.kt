@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
+
 class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,8 +59,13 @@ class SignUpActivity : AppCompatActivity() {
         }
 
 
-        gotologin.setOnClickListener{
-            //TODO: Make the login
+        sloginButton.setOnClickListener{
+            val loginIntent = Intent(
+                this,
+                LogInActivity::class.java
+            )
+            startActivity(loginIntent)
+            return@setOnClickListener
         }
     }
 }

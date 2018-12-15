@@ -66,6 +66,14 @@ class UserFragment : Fragment() {
             userField.visibility = View.GONE;
             signupB.visibility = View.VISIBLE;
             //TODO Set signButton Click Listenr go to signUpActivity
+            signupB.setOnClickListener{
+                val signUpIntent = Intent(
+                    activity,
+                    SignUpActivity::class.java
+                )
+                startActivity(signUpIntent)
+                return@setOnClickListener
+            }
         }
 
     }

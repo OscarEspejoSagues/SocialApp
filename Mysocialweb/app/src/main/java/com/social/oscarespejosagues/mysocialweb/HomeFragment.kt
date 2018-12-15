@@ -93,7 +93,7 @@ class HomeFragment : Fragment() {
                     pulltorefresh.isRefreshing = false;
                 }
             }else{
-                //TODO HOLY SHIT OH MY GOOOOOOOOOOD
+                //TODO errors
                 pulltorefresh.isRefreshing = false;
             }
         }
