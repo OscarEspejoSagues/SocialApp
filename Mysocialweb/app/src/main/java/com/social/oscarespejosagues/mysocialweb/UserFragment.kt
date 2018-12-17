@@ -41,6 +41,7 @@ class UserFragment : Fragment() {
             //User
             userField.visibility = View.VISIBLE;
             signupB.visibility = View.GONE;
+            loginB.visibility = View.GONE;
             // Fill user data
             val db = FirebaseFirestore.getInstance()
                 // Get user
@@ -65,13 +66,21 @@ class UserFragment : Fragment() {
             //No user
             userField.visibility = View.GONE;
             signupB.visibility = View.VISIBLE;
-            //TODO Set signButton Click Listenr go to signUpActivity
+            loginB.visibility = View.VISIBLE;
             signupB.setOnClickListener{
                 val signUpIntent = Intent(
                     activity,
                     SignUpActivity::class.java
                 )
                 startActivity(signUpIntent)
+                return@setOnClickListener
+            }
+            loginB.setOnClickListener{
+                val logInIntent = Intent(
+                    activity,
+                    LogInActivity::class.java
+                )
+                startActivity(logInIntent)
                 return@setOnClickListener
             }
         }
