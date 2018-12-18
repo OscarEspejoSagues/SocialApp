@@ -42,6 +42,7 @@ class UserFragment : Fragment() {
             userField.visibility = View.VISIBLE;
             signupB.visibility = View.GONE;
             loginB.visibility = View.GONE;
+            signoutB.visibility = View.VISIBLE;
             // Fill user data
             val db = FirebaseFirestore.getInstance()
                 // Get user
@@ -60,6 +61,9 @@ class UserFragment : Fragment() {
                 .addOnFailureListener {
                     // TODO: failure getitng user
                 }
+                signoutB.setOnClickListener {
+
+                }
 
 
         }?: kotlin.run{
@@ -67,6 +71,7 @@ class UserFragment : Fragment() {
             userField.visibility = View.GONE;
             signupB.visibility = View.VISIBLE;
             loginB.visibility = View.VISIBLE;
+            signoutB.visibility = View.GONE;
             signupB.setOnClickListener{
                 val signUpIntent = Intent(
                     activity,

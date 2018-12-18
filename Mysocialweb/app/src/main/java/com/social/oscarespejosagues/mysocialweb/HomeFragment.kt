@@ -59,7 +59,7 @@ class HomeFragment : Fragment() {
                 userProfile?.let {
                     var userText = userInput.text.toString()
                     //Create Message Model
-                    val userMessage = MessageModel(text = userText, createdAd = Date(), username = userProfile.username, userId = authUser.uid, avatarUrl = userProfile.avatarUrl)
+                    val userMessage = MessageModel(text = userText, createdAt = Date(), username = userProfile.username, userId = authUser.uid, avatarUrl = userProfile.avatarUrl)
                     //Insert to Firebase
                     db.collection("messages").add(userMessage)
                         .addOnSuccessListener {
@@ -74,6 +74,7 @@ class HomeFragment : Fragment() {
         }
     }
     fun refreshData(){
+        pulltorefresh.isRefreshing = true
         val db = FirebaseFirestore.getInstance()
         db.collection("messages").orderBy("createdAt", Query.Direction.DESCENDING).get().addOnCompleteListener { task ->
             if (task.isSuccessful) {

@@ -21,7 +21,7 @@ class SignUpActivity : AppCompatActivity() {
 
             val username = usernameInput.text.toString();
             val email = emailInput.text.toString();
-            val password = emailInput.text.toString();
+            val password = passwordInput.text.toString();
             //Validation
             if (!username.isEmpty() && !email.isEmpty() && !password.isEmpty()){
                 //Do sign up
