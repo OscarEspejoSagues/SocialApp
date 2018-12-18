@@ -6,9 +6,71 @@
         android:layout_width="match_parent"
          android:layout_height="match_parent">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:text="ADD NEEEEWS"
-            android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <TextView   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/fontsize"
+                    android:text="User Name"/>
+        <EditText
+                android:id="@+id/usernameInputAddNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_gravity="center"
+                android:hint="Enter your user name"/>
+
+        <TextView   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/fontsize"
+                    android:text="Title"/>
+        <EditText
+                android:id="@+id/titleInputAddNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_gravity="center"
+                android:hint="Enter your news title"/>
+
+        <TextView   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/fontsize"
+                    android:text="News"/>
+        <EditText
+                android:id="@+id/descriptionInputAddNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_gravity="center"
+                android:hint="Enter your news description/text"/>
+
+        <TextView   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/fontsize"
+                    android:text="Url to Image"/>
+        <EditText
+                android:id="@+id/urlInputAddNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_gravity="center"
+                android:hint="Enter your url for an image"/>
+
+        <Button
+                android:id="@+id/uploadthenews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload!"/>
+
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

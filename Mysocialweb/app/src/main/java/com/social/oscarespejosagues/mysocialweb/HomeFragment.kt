@@ -36,7 +36,6 @@ class HomeFragment : Fragment() {
         val db = FirebaseFirestore.getInstance()
 
         SendButton.setOnClickListener {
-            //TODO: Check if user is logged in
             if (FirebaseAuth.getInstance().currentUser == null) {
                 //pasas activity por que el fragment no tiene la actividad
                 val signUpIntent = Intent(
@@ -79,12 +78,11 @@ class HomeFragment : Fragment() {
         val db = FirebaseFirestore.getInstance()
         db.collection("messages").orderBy("createdAt", Query.Direction.DESCENDING).get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                //TODO GET MESSAGES
                 val list = ArrayList<MessageModel>()
                 task.result?.forEach{documentSnapshot->
                     documentSnapshot.data //ES la info del documento
                     val message = documentSnapshot.toObject(MessageModel::class.java)
-                    Log.i("MainActivity", "Got message with text:"+message.text);
+                    //Log.i("MainActivity", "Got message with text:"+message.text);
                     list.add(message);
                 }
                 activity?.let {

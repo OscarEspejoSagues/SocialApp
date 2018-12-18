@@ -23,7 +23,7 @@ class LogInActivity : AppCompatActivity() {
 
             if (!email.isEmpty() && !password.isEmpty()){
                 auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this) { task ->
-                    Log.e("MainActivity",task.exception.toString())
+                    //Log.e("MainActivity",task.exception.toString())
                     progressbarlogin.visibility = View.VISIBLE;
                     if (task.isSuccessful){
                         Toast.makeText(this,"Welcome", Toast.LENGTH_SHORT).show();
