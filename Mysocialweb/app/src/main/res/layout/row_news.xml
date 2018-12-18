@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/TVauthor"
+                android:layout_width="wrap_content"
+                android:text="OSCAR"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/TVtitle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:text="CRUSADERS"
+                android:textStyle="bold"
+                android:lines="1"
+                android:textSize="@dimen/fontsize"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/TVtextnews"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:text="After the Fourth Crusade, the nature of the movement changed. Never again was there a general multinational crusade directed at the Holy Land. The experiences of 1187-92 had shown that Egypt was the base of Muslim power, and so expeditions were directed there. It would be a mistake to see the end of crusading fervour however. During the thirteenth century there were eight large expeditions, as well as other manifestations of crusading ideas. None of these expeditions could avoid the effects of the rise of the Mongols and Mamelukes in the Middle East - where armies increased in size and made the small Western units meaningless. The eight thirteenth-century expeditions were"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:id="@+id/IVurlimage"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:src = "@drawable/ic_sentiment"/>
+
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

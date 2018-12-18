@@ -33,6 +33,13 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
+        <activity android:name=".AddNewsActivity"
+                  android:label="Add News"
+                  android:parentActivityName=".MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
+        </activity>
         <!--CConfigure para hacer un comentario control+barra-->
         <provider
                 android:name="android.support.v4.content.FileProvider"
