@@ -13,6 +13,7 @@ import android.support.v4.content.FileProvider
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
@@ -51,18 +52,20 @@ class UserFragment : Fragment() {
                     val userProfile = documentSnapshot.toObject(UserProfile::class.java)
                     userProfile?.let {userProfile ->
                         // Populate fields
-                        username.text = userProfile.username
-                        useremail.text = userProfile.email
+                        username.text =  "User: "+ userProfile.username
+                        USERem.text = "Email: " + userProfile.email
                         userImage.setOnClickListener{
                             takepicture();
                         }
                     }
                 }
                 .addOnFailureListener {
-                    // TODO: failure getitng user
+                    Toast.makeText(activity,"An Error just happen", Toast.LENGTH_SHORT).show();
                 }
                 signoutB.setOnClickListener {
-
+                    var mAuth = FirebaseAuth.getInstance();
+                    mAuth!!.signOut()
+                    Toast.makeText(activity,"You just log out", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -166,8 +169,7 @@ class UserFragment : Fragment() {
                                 // TODO: Save to user profile
 
                             } else {
-                                // Handle failures
-
+                                Toast.makeText(activity,"Error saving the profile, check internet connexion", Toast.LENGTH_LONG).show();
                             }
                         }
 

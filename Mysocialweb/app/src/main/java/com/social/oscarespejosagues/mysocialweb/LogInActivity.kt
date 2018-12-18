@@ -3,9 +3,11 @@ package com.social.oscarespejosagues.mysocialweb
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_log_in.*
+import kotlinx.android.synthetic.main.activity_sign_up.*
 
 
 class LogInActivity : AppCompatActivity() {
@@ -22,6 +24,7 @@ class LogInActivity : AppCompatActivity() {
             if (!email.isEmpty() && !password.isEmpty()){
                 auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this) { task ->
                     Log.e("MainActivity",task.exception.toString())
+                    progressbarlogin.visibility = View.VISIBLE;
                     if (task.isSuccessful){
                         Toast.makeText(this,"Welcome", Toast.LENGTH_SHORT).show();
                         finish();

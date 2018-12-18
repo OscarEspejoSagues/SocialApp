@@ -52,5 +52,12 @@
             android:textSize="@dimen/fontsize"
             android:text="Log In"
          />
+        <ProgressBar
+            android:id="@+id/progressbarlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:indeterminate="true"
+            android:visibility="gone"/>
 
 </LinearLayout>

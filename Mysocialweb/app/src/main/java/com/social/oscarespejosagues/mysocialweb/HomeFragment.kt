@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.adriaortizmartinez.epicsoundboardlmao.MessageAdapter
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -69,7 +70,7 @@ class HomeFragment : Fragment() {
                         }
                 }
             }.addOnFailureListener {
-                //Report erro
+                Toast.makeText(activity,"Error sending the missage", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -94,7 +95,7 @@ class HomeFragment : Fragment() {
                     pulltorefresh.isRefreshing = false;
                 }
             }else{
-                //TODO errors
+                Toast.makeText(activity,"Error refreshing, check internet connexion", Toast.LENGTH_LONG).show();
                 pulltorefresh.isRefreshing = false;
             }
         }
