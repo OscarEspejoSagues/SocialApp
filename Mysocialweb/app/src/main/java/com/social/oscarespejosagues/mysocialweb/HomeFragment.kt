@@ -64,6 +64,7 @@ class HomeFragment : Fragment() {
                     db.collection("messages").add(userMessage)
                         .addOnSuccessListener {
                             refreshData()
+                            userInput.text.clear()
                         }.addOnFailureListener {
                             Log.e("HomeFragment", it.message)
                         }

@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.adriaortizmartinez.epicsoundboardlmao.MessageAdapter
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_news.*
@@ -26,12 +27,16 @@ class NewsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val db = FirebaseFirestore.getInstance()
         addyournews.setOnClickListener{
-            val addnewsintent = Intent(
-                activity,
-                AddNewsActivity::class.java
-            )
-            startActivity(addnewsintent)
-            return@setOnClickListener
+            if (FirebaseAuth.getInstance().currentUser == null){
+                Toast.makeText(activity,"You need to log in to publish news :D", Toast.LENGTH_LONG).show();
+            }else {
+                val addnewsintent = Intent(
+                    activity,
+                    AddNewsActivity::class.java
+                )
+                startActivity(addnewsintent)
+                return@setOnClickListener
+            }
         }
         refreshData()
     }
@@ -41,9 +46,9 @@ class NewsFragment : Fragment() {
             if (task.isSuccessful){
                 val list = ArrayList<NewsModel>()
                 task.result?.forEach{documentSnapshot->
-                    pulltorefreshnews.isRefreshing = true
                     documentSnapshot.data //ES la info del documento
                     val noticia = documentSnapshot.toObject(NewsModel::class.java)
+                    Log.e("NewsFragment", noticia.title)
                     list.add(noticia);
                 }
                 activity?.let {
@@ -53,7 +58,6 @@ class NewsFragment : Fragment() {
             }else{
                 //todo check erros
                 Toast.makeText(activity,"Error refreshing, check internet connexion", Toast.LENGTH_LONG).show();
-                pulltorefreshnews.isRefreshing = false;
             }
         }
     }

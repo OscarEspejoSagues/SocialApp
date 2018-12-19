@@ -8,6 +8,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.request.RequestOptions
 import com.social.oscarespejosagues.mysocialweb.MessageModel
 import com.social.oscarespejosagues.mysocialweb.R
 import kotlinx.android.synthetic.main.row_message.view.*
@@ -28,7 +30,12 @@ class MessageAdapter(var List: ArrayList<MessageModel>) : RecyclerView.Adapter<M
     override fun onBindViewHolder(viewHolder: MessageViewHolder, position: Int) {
         val message = List[position]
         viewHolder.text.text = List[position].text
-        Glide.with(viewHolder.userAvatar).load(message.avatarUrl).into(viewHolder.userAvatar)
+        viewHolder.createdAt.text = List[position].createdAt.toString();
+        Glide.with(viewHolder.userAvatar.context).load(message.avatarUrl).apply(
+            RequestOptions()
+                .transforms(CenterCrop())
+                .placeholder(R.drawable.ic_sentiment)
+        ).into(viewHolder.userAvatar)
         //viewHolder.userAvatar = message.avatarUrl
         /*viewHolder.soundButton.setOnClickListener{
             onSoundClickListener?.onItemClick(soundList[position], position)
@@ -37,6 +44,7 @@ class MessageAdapter(var List: ArrayList<MessageModel>) : RecyclerView.Adapter<M
 
     class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var text: TextView = itemView.messageText;
-        var userAvatar: ImageView = itemView.userAvatar
+        var createdAt: TextView = itemView.messageDate;
+        var userAvatar: ImageView = itemView.userAvatar //ERROR BUT WORKS THE IMAGE IS CIRCLE
     }
 }
