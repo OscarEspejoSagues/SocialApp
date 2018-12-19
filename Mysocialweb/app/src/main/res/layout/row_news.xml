@@ -8,6 +8,7 @@
         CardView:cardBackgroundColor="@color/colorPrimaryDark"
         CardView:cardPreventCornerOverlap="true"
         CardView:cardUseCompatPadding="true"
+        android:layout_gravity="center"
         CardView:cardCornerRadius="50dp">
 
     <LinearLayout
@@ -45,8 +46,8 @@
                 android:layout_height="wrap_content"/>
         <ImageView
                 android:id="@+id/IVurlimage"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_centerHorizontal="true"
                 android:src = "@drawable/ic_sentiment"/>
