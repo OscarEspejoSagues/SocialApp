@@ -28,7 +28,7 @@ class AddNewsActivity: AppCompatActivity() {
                 val url = urlInputAddNews.text.toString();
                 if (!username.isEmpty() && !title.isEmpty() && !description.isEmpty() && !url.isEmpty()){
                 val db = FirebaseFirestore.getInstance()
-                val userNews = NewsModel(author = username, title = title, createdAt = Date(), description = description, urlImage = url)
+                val userNews = NewsModel(author = username, title = title, createdAt = Date(), description = description, imageUrl = url)
                 db.collection("news").add(userNews)
                     .addOnSuccessListener{
                         Toast.makeText(this,"Uploaded News", Toast.LENGTH_LONG).show();

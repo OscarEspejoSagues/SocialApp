@@ -29,6 +29,7 @@ class MessageAdapter(var List: ArrayList<MessageModel>) : RecyclerView.Adapter<M
 
     override fun onBindViewHolder(viewHolder: MessageViewHolder, position: Int) {
         val message = List[position]
+        viewHolder.username.text = List[position].username
         viewHolder.text.text = List[position].text
         viewHolder.createdAt.text = List[position].createdAt.toString();
         Glide.with(viewHolder.userAvatar.context).load(message.avatarUrl).apply(
@@ -43,6 +44,7 @@ class MessageAdapter(var List: ArrayList<MessageModel>) : RecyclerView.Adapter<M
     }
 
     class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        var username: TextView = itemView.userNameMissage;
         var text: TextView = itemView.messageText;
         var createdAt: TextView = itemView.messageDate;
         var userAvatar: ImageView = itemView.userAvatar //ERROR BUT WORKS THE IMAGE IS CIRCLE

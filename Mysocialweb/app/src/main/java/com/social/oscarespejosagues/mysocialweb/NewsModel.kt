@@ -6,6 +6,6 @@ data class NewsModel(
     var author:String? = null,
     var title:String? = null,
     var createdAt: Date? = null,
-    var urlImage: String? = null,
+    var imageUrl: String? = null,
     var description:String? = null
 )

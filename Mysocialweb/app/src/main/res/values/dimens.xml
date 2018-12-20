@@ -2,4 +2,5 @@
 <resources>
     <dimen name="margin">16dp</dimen>
     <dimen name="fontsize">20sp</dimen>
+    <dimen name="topInMessage">1dp</dimen>
 </resources>

@@ -27,17 +27,29 @@
                 android:src="@drawable/ic_sentiment"/>
 
         <TextView
-                android:id="@+id/messageText"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="20dp"
+                android:id="@+id/userNameMissage"
+                android:textColor="@color/White"
+                android:layout_marginTop="@dimen/topInMessage"
+                android:textStyle="italic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="test text"
                 android:layout_marginLeft="120dp"
                 android:padding="@dimen/margin"/>
+
+        <TextView
+                android:id="@+id/messageText"
+                android:textColor="@color/White"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test text"
+                android:textStyle="bold"
+                android:layout_marginLeft="120dp"
+                android:padding="@dimen/margin"/>
         <TextView
                 android:id="@+id/messageDate"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:layout_marginTop="60dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

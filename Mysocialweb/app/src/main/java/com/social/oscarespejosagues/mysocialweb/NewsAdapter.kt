@@ -33,7 +33,7 @@ class NewsAdapter(var List: ArrayList<NewsModel>) : RecyclerView.Adapter<NewsAda
         viewHolder.Ntitle.text = List[position].title;
         viewHolder.Ncreatedat.text = List[position].createdAt.toString();
         viewHolder.Ntextnews.text = List[position].description;
-        Glide.with(viewHolder.Nurl.context).load(news.urlImage).apply(
+        Glide.with(viewHolder.Nurl.context).load(news.imageUrl).apply(
             RequestOptions()
                 .transforms(CenterCrop())
                 .placeholder(R.drawable.ic_sentiment)

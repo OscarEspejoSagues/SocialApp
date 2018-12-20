@@ -89,7 +89,6 @@ class HomeFragment : Fragment() {
                 activity?.let {
                     recycleview.adapter = MessageAdapter(list);
                     recycleview.layoutManager = LinearLayoutManager(activity);
-
                     //End refresh
                     pulltorefresh.isRefreshing = false;
                 }

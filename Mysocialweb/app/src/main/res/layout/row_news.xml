@@ -8,50 +8,70 @@
         CardView:cardBackgroundColor="@color/colorPrimaryDark"
         CardView:cardPreventCornerOverlap="true"
         CardView:cardUseCompatPadding="true"
-        android:layout_gravity="center"
         CardView:cardCornerRadius="50dp">
 
-    <LinearLayout
+    <RelativeLayout
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-        <TextView
-                android:id="@+id/TVauthor"
-                android:layout_width="wrap_content"
-                android:textColor="#FFFFFF"
-                android:layout_height="wrap_content"/>
-        <TextView
-                android:id="@+id/TVtitle"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="@dimen/margin"
-                android:textStyle="bold"
-                android:lines="1"
-                android:textColor="#FFFFFF"
-                android:textSize="@dimen/fontsize"
-                android:layout_height="wrap_content"/>
-        <TextView
-                android:id="@+id/TVdate"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="@dimen/margin"
-                android:lines="1"
-                android:textColor="#FFFFFF"
-                android:layout_height="wrap_content"/>
-        <TextView
-                android:id="@+id/TVtextnews"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="@dimen/margin"
-                android:layout_marginLeft="@dimen/margin"
-                android:textColor="#FFFFFF"
-                android:layout_height="wrap_content"/>
-        <ImageView
+            android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/IVurlimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_centerHorizontal="true"
-                android:src = "@drawable/ic_sentiment"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:civ_border_width="8dp"
+                app:civ_border_color="@color/colorPrimary"
+                android:src="@drawable/ic_sentiment"/>
 
-    </LinearLayout>
+        <TextView
+                android:id="@+id/TVauthor"
+                android:textColor="@color/White"
+                android:layout_marginTop="1dp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oscar"
+                android:gravity="center"
+                android:layout_marginLeft="170dp"
+                android:padding="@dimen/margin"/>
+        <TextView
+                android:id="@+id/TVtitle"
+                android:textColor="@color/White"
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THE INDIAN PROBLEM"
+                android:layout_marginLeft="125dp"
+                android:padding="@dimen/margin"/>
+        <TextView
+                android:id="@+id/TVdate"
+                android:textColor="@color/White"
+                android:layout_marginTop="60dp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14/5/2015"
+                android:lines="1"
+                android:layout_marginLeft="150dp"
+                android:padding="@dimen/margin"/>
+        <TextView
+                android:id="@+id/TVtextnews"
+                android:textColor="@color/White"
+                android:layout_marginTop="100dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida pharetra condimentum. Nam vestibulum lorem in sodales consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                android:gravity="center"
+                android:padding="@dimen/margin"/>
+
+
+    </RelativeLayout>
 
 </android.support.v7.widget.CardView>
