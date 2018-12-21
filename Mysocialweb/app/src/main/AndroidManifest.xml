@@ -12,33 +12,33 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".actvities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity"
+        <activity android:name=".actvities.SignUpActivity"
                   android:label="Sign Up"
-        android:parentActivityName=".MainActivity">
+        android:parentActivityName=".actvities.MainActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivity"/>
+                    android:value=".actvities.MainActivity"/>
         </activity>
-        <activity android:name=".LogInActivity"
+        <activity android:name=".actvities.LogInActivity"
                   android:label="Log In"
-                  android:parentActivityName=".MainActivity">
+                  android:parentActivityName=".actvities.MainActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivity"/>
+                    android:value=".actvities.MainActivity"/>
         </activity>
-        <activity android:name=".AddNewsActivity"
+        <activity android:name=".actvities.AddNewsActivity"
                   android:label="Add News"
-                  android:parentActivityName=".MainActivity">
+                  android:parentActivityName=".actvities.MainActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivity"/>
+                    android:value=".actvities.MainActivity"/>
         </activity>
         <!--CConfigure para hacer un comentario control+barra-->
         <provider

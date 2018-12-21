@@ -1,9 +1,8 @@
-package com.social.oscarespejosagues.mysocialweb
+package com.social.oscarespejosagues.mysocialweb.fragments
 
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -20,6 +19,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
+import com.social.oscarespejosagues.mysocialweb.R
+import com.social.oscarespejosagues.mysocialweb.actvities.SignUpActivity
+import com.social.oscarespejosagues.mysocialweb.adapters.UserProfile
+import com.social.oscarespejosagues.mysocialweb.actvities.LogInActivity
 import kotlinx.android.synthetic.main.fragment_user.*
 import java.io.File
 import java.io.IOException

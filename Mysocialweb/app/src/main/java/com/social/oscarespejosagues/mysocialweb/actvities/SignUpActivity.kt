@@ -1,4 +1,4 @@
-package com.social.oscarespejosagues.mysocialweb
+package com.social.oscarespejosagues.mysocialweb.actvities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.social.oscarespejosagues.mysocialweb.R
+import com.social.oscarespejosagues.mysocialweb.adapters.UserProfile
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 
@@ -32,7 +34,11 @@ class SignUpActivity : AppCompatActivity() {
                             // Sign in success, update UI with the signed-in user's information
                             val user = FirebaseAuth.getInstance().currentUser
                             user?.let { userAth->
-                                val userProfile = UserProfile(username = username, userId = userAth.uid, email = email);
+                                val userProfile = UserProfile(
+                                    username = username,
+                                    userId = userAth.uid,
+                                    email = email
+                                );
                                 val db = FirebaseFirestore.getInstance();
                                 db.collection("users").document(userAth.uid).set(userProfile).addOnCompleteListener { Task->
                                     if (Task.isSuccessful){

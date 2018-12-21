@@ -4,13 +4,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
-import com.social.oscarespejosagues.mysocialweb.MessageModel
+import com.social.oscarespejosagues.mysocialweb.models.MessageModel
 import com.social.oscarespejosagues.mysocialweb.R
 import kotlinx.android.synthetic.main.row_message.view.*
 

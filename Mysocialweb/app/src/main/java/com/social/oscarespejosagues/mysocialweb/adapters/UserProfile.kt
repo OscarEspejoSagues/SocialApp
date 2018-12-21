@@ -1,4 +1,4 @@
-package com.social.oscarespejosagues.mysocialweb
+package com.social.oscarespejosagues.mysocialweb.adapters
 
 data class UserProfile(
     var avatarUrl: String? = null,

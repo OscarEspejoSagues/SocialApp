@@ -1,4 +1,4 @@
-package com.social.oscarespejosagues.mysocialweb
+package com.social.oscarespejosagues.mysocialweb.models
 
 import java.util.*
 

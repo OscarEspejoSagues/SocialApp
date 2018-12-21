@@ -1,9 +1,12 @@
-package com.social.oscarespejosagues.mysocialweb
+package com.social.oscarespejosagues.mysocialweb.actvities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.util.Log
+import com.social.oscarespejosagues.mysocialweb.fragments.HomeFragment
+import com.social.oscarespejosagues.mysocialweb.fragments.NewsFragment
+import com.social.oscarespejosagues.mysocialweb.R
+import com.social.oscarespejosagues.mysocialweb.fragments.UserFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,13 +21,16 @@ class MainActivity : AppCompatActivity() {
 
             when(tab.itemId){//switch se llama when
                 R.id.tab_home -> {
-                    fragment = HomeFragment() //creas el fragment home
+                    fragment =
+                            HomeFragment() //creas el fragment home
                 }
                 R.id.tab_news ->{
-                    fragment = NewsFragment() //creas el fragment home
+                    fragment =
+                            NewsFragment() //creas el fragment home
                 }
                 R.id.tab_user ->{
-                    fragment = UserFragment() //creas el fragment home
+                    fragment =
+                            UserFragment() //creas el fragment home
                 }
             }
             val fragmentManager = supportFragmentManager

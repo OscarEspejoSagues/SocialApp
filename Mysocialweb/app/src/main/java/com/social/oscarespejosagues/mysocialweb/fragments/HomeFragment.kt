@@ -1,4 +1,4 @@
-package com.social.oscarespejosagues.mysocialweb
+package com.social.oscarespejosagues.mysocialweb.fragments
 
 
 import android.content.Intent
@@ -15,6 +15,9 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home.*
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.social.oscarespejosagues.mysocialweb.models.MessageModel
+import com.social.oscarespejosagues.mysocialweb.R
+import com.social.oscarespejosagues.mysocialweb.actvities.SignUpActivity
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -59,7 +62,13 @@ class HomeFragment : Fragment() {
                 userProfile?.let {
                     var userText = userInput.text.toString()
                     //Create Message Model
-                    val userMessage = MessageModel(text = userText, createdAt = Date(), username = userProfile.username, userId = authUser.uid, avatarUrl = userProfile.avatarUrl)
+                    val userMessage = MessageModel(
+                        text = userText,
+                        createdAt = Date(),
+                        username = userProfile.username,
+                        userId = authUser.uid,
+                        avatarUrl = userProfile.avatarUrl
+                    )
                     //Insert to Firebase
                     db.collection("messages").add(userMessage)
                         .addOnSuccessListener {

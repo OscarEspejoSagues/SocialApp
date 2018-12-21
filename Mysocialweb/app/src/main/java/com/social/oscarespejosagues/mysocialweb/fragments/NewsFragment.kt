@@ -1,4 +1,4 @@
-package com.social.oscarespejosagues.mysocialweb
+package com.social.oscarespejosagues.mysocialweb.fragments
 
 
 import android.content.Intent
@@ -10,10 +10,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.adriaortizmartinez.epicsoundboardlmao.MessageAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.social.oscarespejosagues.mysocialweb.NewsAdapter
+import com.social.oscarespejosagues.mysocialweb.models.NewsModel
+import com.social.oscarespejosagues.mysocialweb.R
+import com.social.oscarespejosagues.mysocialweb.actvities.AddNewsActivity
 import kotlinx.android.synthetic.main.fragment_news.*
 
 
