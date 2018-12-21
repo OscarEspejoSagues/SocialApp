@@ -7,7 +7,7 @@
         CardView:cardBackgroundColor="@color/colorPrimaryDark"
         CardView:cardPreventCornerOverlap="true"
         CardView:cardUseCompatPadding="true"
-        CardView:cardCornerRadius="50dp">
+        CardView:cardCornerRadius="@dimen/radiusCard">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -18,45 +18,48 @@
         <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/userAvatar"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/ImageWidth"
+                android:layout_height="@dimen/ImageHeight"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                app:civ_border_width="8dp"
+                android:layout_marginTop="25dp"
+                app:civ_border_width="@dimen/BorderSize"
                 app:civ_border_color="@color/colorPrimary"
                 android:src="@drawable/ic_sentiment"/>
+        <LinearLayout
+                android:id="@+id/linearLayoutMiss"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/userAvatar"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/userNameMissage"
+                    android:textColor="@color/White"
+                    android:layout_marginTop="@dimen/topInMessage"
+                    android:textStyle="italic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test text"
+                    android:padding="@dimen/margin"/>
 
-        <TextView
-                android:id="@+id/userNameMissage"
-                android:textColor="@color/White"
-                android:layout_marginTop="@dimen/topInMessage"
-                android:textStyle="italic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test text"
-                android:layout_marginLeft="120dp"
-                android:padding="@dimen/margin"/>
+            <TextView
+                    android:id="@+id/messageText"
+                    android:textColor="@color/White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fontsize"
+                    android:text="test text"
+                    android:textStyle="bold"
+                    android:padding="@dimen/margin"/>
+            <TextView
+                    android:id="@+id/messageDate"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="17/7/188"
+                    android:padding="@dimen/margin"/>
+        </LinearLayout>
 
-        <TextView
-                android:id="@+id/messageText"
-                android:textColor="@color/White"
-                android:layout_marginTop="30dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test text"
-                android:textStyle="bold"
-                android:layout_marginLeft="120dp"
-                android:padding="@dimen/margin"/>
-        <TextView
-                android:id="@+id/messageDate"
-                android:textColor="@color/White"
-                android:layout_marginTop="60dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="190dp"
-                android:lines="1"
-                android:text="17/7/188"
-                android:padding="@dimen/margin"/>
 
     </RelativeLayout>
 

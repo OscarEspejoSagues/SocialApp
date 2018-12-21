@@ -34,21 +34,28 @@
             android:id="@+id/userField"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/userImage"
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
+                    android:layout_width="@dimen/ImageWidth"
+                    android:layout_height="@dimen/ImageHeight"
                     android:layout_gravity="center"
                     android:layout_centerHorizontal="true"
+                    app:civ_border_width="@dimen/BorderSize"
+                    android:layout_marginTop="5dp"
+                    app:civ_border_color="@color/colorPrimary"
                     android:src = "@drawable/ic_sentiment"/>
+
             <TextView
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
-                    android:layout_marginTop="180dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginLeft="@dimen/UserLeftSpace"
                     android:layout_gravity="center"/>
 
             <TextView
@@ -56,7 +63,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginTop="220dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginLeft="@dimen/UserLeftSpace"
                     android:layout_gravity="center"/>
 
     </RelativeLayout>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin">16dp</dimen>
-    <dimen name="fontsize">20sp</dimen>
+    <dimen name="radiusCard">50dp</dimen>
     <dimen name="topInMessage">1dp</dimen>
+    <dimen name="ImageWidth">100dp</dimen>
+    <dimen name="ImageHeight">100dp</dimen>
+    <dimen name="BorderSize">8dp</dimen>
+    <dimen name="UserLeftSpace">30dp</dimen>
+
+    <dimen name="fontsize">20sp</dimen>
 </resources>
